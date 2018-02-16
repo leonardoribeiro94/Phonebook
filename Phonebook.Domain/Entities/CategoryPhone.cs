@@ -2,6 +2,15 @@
 {
     public class CategoryPhone
     {
-        public string Description { get; set; }
+        public CategoryPhone()
+        {
+
+        }
+        public CategoryPhone(string description)
+        {
+            Description = description;
+        }
+
+        public string Description { get; private set; }
     }
 }

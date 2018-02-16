@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\CategoryPhone.cs" />
-    <Compile Include="Entities\CathegoryGroup.cs" />
+    <Compile Include="Entities\CategoryGroup.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
