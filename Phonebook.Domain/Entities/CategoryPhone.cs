@@ -1,6 +1,8 @@
-﻿namespace Phonebook.Domain.Entities
+﻿using Phonebook.Shared.Entities;
+
+namespace Phonebook.Domain.Entities
 {
-    public class CategoryPhone
+    public class CategoryPhone : Entity
     {
         public CategoryPhone()
         {

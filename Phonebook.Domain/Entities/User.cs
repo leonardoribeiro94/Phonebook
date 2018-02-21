@@ -1,10 +1,10 @@
-﻿using Flunt.Notifications;
-using Flunt.Validations;
+﻿using Flunt.Validations;
+using Phonebook.Shared.Entities;
 using System.Text;
 
 namespace Phonebook.Domain.Entities
 {
-    public class User : Notifiable
+    public class User : Entity
     {
         public User()
         {

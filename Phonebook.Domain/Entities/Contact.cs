@@ -1,12 +1,12 @@
-﻿using Flunt.Notifications;
-using Phonebook.Domain.ValueObjects;
+﻿using Phonebook.Domain.ValueObjects;
+using Phonebook.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Phonebook.Domain.Entities
 {
-    public class Contact : Notifiable
+    public class Contact : Entity
     {
 
         private readonly IList<CategoryGroup> _categoryGroups;
