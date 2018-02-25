@@ -45,5 +45,9 @@ namespace Phonebook.Domain.Entities
             _categoryGroups.Add(categoryGroup);
         }
 
+        public override string ToString()
+        {
+            return $"{Name.FirstName} {Name.LastName}";
+        }
     }
 }

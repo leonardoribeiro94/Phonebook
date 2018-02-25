@@ -20,5 +20,10 @@ namespace Phonebook.Domain.Entities
         public User User { get; private set; }
         public Email Email { get; private set; }
 
+
+        public override string ToString()
+        {
+            return $"{Name.FirstName} {Name.LastName}";
+        }
     }
 }

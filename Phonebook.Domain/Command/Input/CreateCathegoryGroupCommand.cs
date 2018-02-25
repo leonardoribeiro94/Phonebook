@@ -2,7 +2,7 @@
 
 namespace Phonebook.Domain.Command.Input
 {
-    public class CreateCathegoryGroup : ICommand
+    public class CreateCathegoryGroupCommand : ICommand
     {
         public string Description { get; set; }
 

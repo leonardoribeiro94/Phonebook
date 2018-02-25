@@ -7,6 +7,7 @@ namespace Phonebook.Domain.Repositories
     {
         ContactOwner Get(Guid id);
         ContactOwner GetById(Guid id);
+        bool UserExists(string userName);
         void Save(ContactOwner contactOwner);
     }
 }
