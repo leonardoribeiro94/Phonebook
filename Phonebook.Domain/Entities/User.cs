@@ -18,7 +18,7 @@ namespace Phonebook.Domain.Entities
 
             AddNotifications(new Contract()
                 .Requires()
-                .HasMinLen(UserName, 5, "User.UserName", "O Nome de usuário deve possuir no mínimo 5 caracteres")
+                .HasMinLen(UserName, 3, "User.UserName", "O Nome de usuário deve possuir no mínimo 3 caracteres")
                 .HasMaxLen(UserName, 20, "User.UserName", "O Nome de usuário deve possuir no máximo 20 caracteres"));
         }
 

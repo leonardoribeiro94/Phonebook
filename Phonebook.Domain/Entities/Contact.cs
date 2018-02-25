@@ -15,26 +15,28 @@ namespace Phonebook.Domain.Entities
         {
 
         }
-        public Contact(Name name, User user, PhoneNumber phoneNumber, Email email)
-        {
 
-            User = user;
+        public Contact(Name name, PhoneNumber phoneNumber, Email email,
+            string webSite, DateTime? birthDay, string profilePicture)
+        {
+            ProfilePicture = profilePicture;
             PhoneNumber = phoneNumber;
             Name = name;
             Email = email;
+            WebSite = webSite;
+            BirthDay = birthDay;
             _categoryGroups = new List<CategoryGroup>();
 
             AddNotifications(Name, Email, phoneNumber);
         }
 
-        public string ProfilePicture { get; set; }
+        public string ProfilePicture { get; private set; }
         public Name Name { get; private set; }
         public Email Email { get; set; }
         public PhoneNumber PhoneNumber { get; private set; }
-        public string WebSite { get; set; }
-        public DateTime BirthDay { get; set; }
-        public User User { get; private set; }
-        public CategoryPhone CategoryPhone { get; set; }
+        public string WebSite { get; private set; }
+        public DateTime? BirthDay { get; private set; }
+
         public ICollection<CategoryGroup> CathegoryGroups => _categoryGroups.ToArray();
 
 

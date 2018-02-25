@@ -98,7 +98,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\Input\RegisterContactOwner.cs" />
+    <Compile Include="Command\Input\CreateCathegoryGroup.cs" />
+    <Compile Include="Command\Input\CreateCathegoryPhoneCommand.cs" />
+    <Compile Include="Command\Input\CreateContactCommand.cs" />
+    <Compile Include="Command\Input\CreateContactOwnerCommand.cs" />
     <Compile Include="Entities\CategoryPhone.cs" />
     <Compile Include="Entities\CategoryGroup.cs" />
     <Compile Include="Entities\Contact.cs" />

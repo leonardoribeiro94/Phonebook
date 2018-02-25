@@ -5,6 +5,8 @@ namespace Phonebook.Domain.Entities
 {
     public class ContactOwner : Entity
     {
+        public ContactOwner() { }
+
         public ContactOwner(User user, Name name, Email email)
         {
             User = user;
