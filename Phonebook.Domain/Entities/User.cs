@@ -29,6 +29,18 @@ namespace Phonebook.Domain.Entities
         public void Activate() => Active = true;
         public void Desactivate() => Active = false;
 
+        public bool Authenticate(string userName, string password)
+        {
+
+            var encryptPassword = EncryptPassword(Password);
+
+            if (UserName == userName && password == encryptPassword)
+                return true;
+
+            AddNotification("User", "Usuário ou senha inválidos!");
+            return false;
+        }
+
         private string EncryptPassword(string pass)
         {
             if (string.IsNullOrEmpty(pass)) return "";
