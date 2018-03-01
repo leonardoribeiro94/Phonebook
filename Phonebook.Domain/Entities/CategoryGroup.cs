@@ -9,8 +9,6 @@ namespace Phonebook.Domain.Entities
         public CategoryGroup(string descriptions)
         {
             Descriptions = descriptions;
-
-
         }
 
         public string Descriptions { get; private set; }

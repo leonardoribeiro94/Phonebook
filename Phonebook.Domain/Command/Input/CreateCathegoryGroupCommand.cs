@@ -6,9 +6,5 @@ namespace Phonebook.Domain.Command.Input
     {
         public string Description { get; set; }
 
-        public void Validate()
-        {
-
-        }
     }
 }

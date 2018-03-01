@@ -1,5 +1,4 @@
 ﻿using Flunt.Notifications;
-using Flunt.Validations;
 using Phonebook.Domain.Entities;
 using Phonebook.Shared.Commands;
 using System;
@@ -17,14 +16,5 @@ namespace Phonebook.Domain.Command.Input
         public string WebSite { get; set; }
         public DateTime BirthDay { get; set; }
         public ICollection<CategoryGroup> CategoryGroups { get; set; }
-
-        public void Validate()
-        {
-            AddNotifications(new Contract()
-                .Requires()
-                .HasMinLen(PhoneNumber, 10, "PhoneNumber.Phone", "O telefone deve possuir no mínimo 10 caracteres")
-                .HasMaxLen(PhoneNumber, 11, "PhoneNumber.Phone", "O telefone deve possuir no máximo 11 caracteres")
-            );
-        }
     }
 }

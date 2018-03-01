@@ -26,12 +26,6 @@ namespace Phonebook.Domain.Command.Handlers
                 return null;
             }
 
-            if (_contactRepository.EmailExists())
-            {
-                AddNotification("Email", "Este e-mail já está em uso!");
-                return null;
-            }
-
             var name = new Name(command.FirstName, command.LastName);
             var email = new Email(command.Address);
             var phoneNumber = new PhoneNumber(command.PhoneNumber);

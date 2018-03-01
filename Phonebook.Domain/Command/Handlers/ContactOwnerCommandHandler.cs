@@ -27,6 +27,7 @@ namespace Phonebook.Domain.Command.Handlers
             }
 
 
+
             var name = new Name(command.FirstName, command.LastName);
             var email = new Email(command.Address);
             var user = new User(command.UserName, command.Password);
