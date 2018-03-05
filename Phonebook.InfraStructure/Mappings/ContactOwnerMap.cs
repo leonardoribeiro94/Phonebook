@@ -14,8 +14,9 @@ namespace Phonebook.InfraStructure.Mappings
             Property(x => x.Name.FirstName).IsRequired().HasMaxLength(50);
             Property(x => x.Name.LastName).HasMaxLength(50);
             Property(x => x.Email.Address).IsRequired().HasMaxLength(80);
-            HasRequired(x => x.User);
+
             HasMany(x => x.Contacts);
+            HasRequired(x => x.User);
         }
     }
 }

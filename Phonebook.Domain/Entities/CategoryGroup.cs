@@ -4,7 +4,10 @@ namespace Phonebook.Domain.Entities
 {
     public class CategoryGroup : Entity
     {
-        public CategoryGroup() { }
+        public CategoryGroup()
+        {
+
+        }
 
         public CategoryGroup(string descriptions)
         {
@@ -12,5 +15,6 @@ namespace Phonebook.Domain.Entities
         }
 
         public string Descriptions { get; private set; }
+
     }
 }

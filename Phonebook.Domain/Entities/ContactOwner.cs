@@ -26,10 +26,8 @@ namespace Phonebook.Domain.Entities
         public Email Email { get; private set; }
         public ICollection<Contact> Contacts => _contacts.ToArray();
 
-        public override string ToString()
-        {
-            return $"{Name.FirstName} {Name.LastName}";
-        }
+        public override string ToString() => $"{Name.FirstName} {Name.LastName}";
+
 
         public void AddItem(Contact contact)
         {

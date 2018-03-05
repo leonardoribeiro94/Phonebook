@@ -99,7 +99,6 @@
     <Compile Include="Command\Input\CreateContactOwnerCommand.cs" />
     <Compile Include="Command\Results\CreateContactOwnerResult.cs" />
     <Compile Include="Command\Results\CreateContactResult.cs" />
-    <Compile Include="Entities\CategoryPhone.cs" />
     <Compile Include="Entities\CategoryGroup.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\ContactOwner.cs" />

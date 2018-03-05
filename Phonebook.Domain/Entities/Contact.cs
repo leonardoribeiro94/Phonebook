@@ -36,9 +36,8 @@ namespace Phonebook.Domain.Entities
         public PhoneNumber PhoneNumber { get; private set; }
         public string WebSite { get; private set; }
         public DateTime? BirthDay { get; private set; }
-
+        public CategoryGroup CategoryGroup { get; private set; }
         public ICollection<CategoryGroup> CathegoryGroups => _categoryGroups.ToArray();
-
 
         public void AddCategoryGroup(CategoryGroup categoryGroup)
         {

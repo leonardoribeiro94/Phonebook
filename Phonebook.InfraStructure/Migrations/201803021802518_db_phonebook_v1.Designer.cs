@@ -7,13 +7,13 @@ namespace Phonebook.InfraStructure.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class db_v1 : IMigrationMetadata
+    public sealed partial class db_phonebook_v1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(db_v1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(db_phonebook_v1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803012200539_db_v1"; }
+            get { return "201803021802518_db_phonebook_v1"; }
         }
         
         string IMigrationMetadata.Source

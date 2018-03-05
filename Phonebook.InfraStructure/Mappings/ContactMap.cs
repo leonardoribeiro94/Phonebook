@@ -11,7 +11,14 @@ namespace Phonebook.InfraStructure.Mappings
             ToTable("Contact");
             HasKey(x => x.Id);
 
-            Property(x => x.Name.FirstName).IsRequired().HasMaxLength(50);
+            Property(x => x.BirthDay).IsRequired();
+            Property(x => x.ProfilePicture).HasMaxLength(1026);
+            Property(x => x.Name.FirstName).IsRequired().HasMaxLength(50).HasColumnName("FirstName");
+            Property(x => x.Name.LastName).IsRequired().HasMaxLength(50).HasColumnName("LastName");
+            Property(x => x.PhoneNumber.Phone).IsRequired().HasMaxLength(50).HasColumnName("Phone");
+            Property(x => x.WebSite).IsRequired().HasMaxLength(50);
+
+            HasMany(x => x.CathegoryGroups);
         }
     }
 }

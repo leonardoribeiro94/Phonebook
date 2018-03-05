@@ -11,11 +11,9 @@ namespace Phonebook.InfraStructure.Mappings
             ToTable("User");
             HasKey(x => x.Id);
 
-            Property(x => x.UserName)
-                .IsRequired().HasMaxLength(20);
-            Property(x => x.Password)
-                .IsRequired().HasMaxLength(20);
-            Property(x => x.Active).IsRequired();
+            Property(x => x.UserName).IsRequired().HasMaxLength(20);
+            Property(x => x.Password).IsRequired().HasMaxLength(20);
+            Property(x => x.Active);
         }
     }
 }
