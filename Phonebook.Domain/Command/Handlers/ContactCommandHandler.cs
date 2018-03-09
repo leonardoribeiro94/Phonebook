@@ -20,7 +20,7 @@ namespace Phonebook.Domain.Command.Handlers
         public ICommandResult Handle(CreateContactCommand command)
         {
 
-            if (_contactRepository.PhoneExists())
+            if (_contactRepository.PhoneExists(command.PhoneNumber))
             {
                 AddNotification("Phone", "Este telefone já está em uso!");
                 return null;

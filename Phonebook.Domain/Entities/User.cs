@@ -27,7 +27,7 @@ namespace Phonebook.Domain.Entities
         public bool Active { get; set; }
 
         public void Activate() => Active = true;
-        public void Desactivate() => Active = false;
+        public void Deactivate() => Active = false;
 
         public bool Authenticate(string userName, string password)
         {

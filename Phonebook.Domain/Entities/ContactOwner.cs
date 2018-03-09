@@ -28,7 +28,6 @@ namespace Phonebook.Domain.Entities
 
         public override string ToString() => $"{Name.FirstName} {Name.LastName}";
 
-
         public void AddItem(Contact contact)
         {
             if (contact.Valid)
@@ -36,7 +35,6 @@ namespace Phonebook.Domain.Entities
                 AddNotifications(contact.Notifications);
                 _contacts.Add(contact);
             }
-
         }
     }
 }
