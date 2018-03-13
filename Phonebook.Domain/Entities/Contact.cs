@@ -32,11 +32,10 @@ namespace Phonebook.Domain.Entities
 
         public string ProfilePicture { get; private set; }
         public Name Name { get; private set; }
-        public Email Email { get; set; }
+        public Email Email { get; private set; }
         public PhoneNumber PhoneNumber { get; private set; }
         public string WebSite { get; private set; }
         public DateTime? BirthDay { get; private set; }
-        public CategoryGroup CategoryGroup { get; private set; }
         public ICollection<CategoryGroup> CathegoryGroups => _categoryGroups.ToArray();
 
         public void AddCategoryGroup(CategoryGroup categoryGroup)

@@ -50,7 +50,7 @@ namespace Phonebook.Domain.Command.Handlers
 
             _contactRepository.Save(contact);
 
-            return new CreateContactResult(contact.Id, contact.Name.ToString());
+            return new CreateContactResult();
         }
     }
 }

@@ -6,13 +6,9 @@ namespace Phonebook.Domain.Command.Results
     public class CreateContactResult : ICommandResult
     {
 
-        public CreateContactResult(Guid id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

@@ -18,7 +18,9 @@ namespace Phonebook.InfraStructure.Mappings
             Property(x => x.PhoneNumber.Phone).IsRequired().HasMaxLength(50).HasColumnName("Phone");
             Property(x => x.WebSite).IsRequired().HasMaxLength(50);
 
-            HasMany(x => x.CathegoryGroups);
+            HasMany(x => x.CathegoryGroups)
+                .WithRequired(x => x.Contact)
+                .HasForeignKey(x => x.ContactId);
         }
     }
 }

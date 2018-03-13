@@ -10,13 +10,8 @@ namespace Phonebook.Domain.Command.Results
 
         }
 
-        public CreateContactOwnerResult(Guid id, string name)
-        {
-            Id = Id;
-            Name = name;
-        }
-
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string UserName { get; set; }
     }
 }

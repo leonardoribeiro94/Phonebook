@@ -43,7 +43,7 @@ namespace Phonebook.Domain.Command.Handlers
 
             _contactOwnerRepository.Save(contactOwner);
 
-            return new CreateContactOwnerResult(command.Id, contactOwner.Name.ToString());
+            return new CreateContactOwnerResult();
         }
     }
 }

@@ -93,6 +93,7 @@
     <Compile Include="Command\Handlers\ContactCommandHandler.cs" />
     <Compile Include="Command\Handlers\ContactOwnerCommandHandler.cs" />
     <Compile Include="Command\Input\AuthenticateUserCommand.cs" />
+    <Compile Include="Command\Input\CreateCathegoryCommand.cs" />
     <Compile Include="Command\Input\CreateCathegoryGroupCommand.cs" />
     <Compile Include="Command\Input\CreateCathegoryPhoneCommand.cs" />
     <Compile Include="Command\Input\CreateContactCommand.cs" />

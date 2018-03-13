@@ -6,11 +6,10 @@ namespace Phonebook.InfraStructure.DataContexts
 {
     public class PhoneBookDataContext : DbContext
     {
-        private static readonly string phoneBookStr =
-            @"Server=.\SQLEXPRESS2008R2;Database=PhoneBook;User Id=sa;Password = 1234567890;";
+        private const string PhoneBookStr = @"Server=.\SQLEXPRESS2008R2;Database=PhoneBook;User Id=sa;Password = 1234567890;";
 
         public PhoneBookDataContext()
-            : base(phoneBookStr)
+            : base(PhoneBookStr)
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
