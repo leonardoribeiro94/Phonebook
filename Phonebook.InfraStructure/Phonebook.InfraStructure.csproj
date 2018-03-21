@@ -105,6 +105,14 @@
     <Compile Include="Migrations\201803021802518_db_phonebook_v1.Designer.cs">
       <DependentUpon>201803021802518_db_phonebook_v1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803211730218_db_phonebook_v2.cs" />
+    <Compile Include="Migrations\201803211730218_db_phonebook_v2.Designer.cs">
+      <DependentUpon>201803211730218_db_phonebook_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803211740008_db_phonebook_v3.cs" />
+    <Compile Include="Migrations\201803211740008_db_phonebook_v3.Designer.cs">
+      <DependentUpon>201803211740008_db_phonebook_v3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ContactOwnerRepository.cs" />
@@ -129,6 +137,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803021802518_db_phonebook_v1.resx">
       <DependentUpon>201803021802518_db_phonebook_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211730218_db_phonebook_v2.resx">
+      <DependentUpon>201803211730218_db_phonebook_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211740008_db_phonebook_v3.resx">
+      <DependentUpon>201803211740008_db_phonebook_v3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

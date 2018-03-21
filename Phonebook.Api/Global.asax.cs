@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Phonebook.Domain.Repositories;
+using Phonebook.InfraStructure.DataContexts;
+using Phonebook.InfraStructure.Repositories;
+using SimpleInjector;
+using SimpleInjector.Integration.WebApi;
+using SimpleInjector.Lifestyles;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace Phonebook.Api
 {
@@ -11,6 +12,19 @@ namespace Phonebook.Api
     {
         protected void Application_Start()
         {
+            var container = new Container();
+
+            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+            container.Register<PhoneBookDataContext>(Lifestyle.Scoped); //EF
+
+            container.Register<IContactRepository, ContactRepository>();
+            container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
+
+            container.Verify();
+
+            GlobalConfiguration.Configuration.DependencyResolver =
+                new SimpleInjectorWebApiDependencyResolver(container);
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

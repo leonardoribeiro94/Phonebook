@@ -24,7 +24,6 @@ namespace Phonebook.Domain.Entities
         public Name Name { get; private set; }
         public User User { get; private set; }
         public Email Email { get; private set; }
-        public CategoryGroup CategoryGroup { get; private set; }
         public ICollection<Contact> Contacts => _contacts.ToArray();
 
         public override string ToString() => $"{Name.FirstName} {Name.LastName}";
