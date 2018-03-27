@@ -1,15 +1,14 @@
 ﻿using Phonebook.Domain.Entities;
 using Phonebook.InfraStructure.Mappings;
+using Phonebook.Shared;
 using System.Data.Entity;
 
 namespace Phonebook.InfraStructure.DataContexts
 {
     public class PhoneBookDataContext : DbContext
     {
-        private const string PhoneBookStr = @"Server=.\SQLEXPRESS2008R2;Database=PhoneBook;User Id=sa;Password = 1234567890;";
-
         public PhoneBookDataContext()
-            : base(PhoneBookStr)
+             : base(Runtime.ConnectionString)
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;

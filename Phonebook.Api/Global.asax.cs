@@ -1,4 +1,5 @@
-﻿using Phonebook.Domain.Repositories;
+﻿using Microsoft.Extensions.Configuration;
+using Phonebook.Domain.Repositories;
 using Phonebook.InfraStructure.DataContexts;
 using Phonebook.InfraStructure.Repositories;
 using SimpleInjector;
@@ -10,22 +11,25 @@ namespace Phonebook.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        public IConfiguration Configuration { get; set; }
+
+
         protected void Application_Start()
         {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             var container = new Container();
 
             container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
             container.Register<PhoneBookDataContext>(Lifestyle.Scoped); //EF
 
             container.Register<IContactRepository, ContactRepository>();
+            container.Register<IContactOwnerRepository, ContactOwnerRepository>();
             container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
 
             container.Verify();
 
             GlobalConfiguration.Configuration.DependencyResolver =
                 new SimpleInjectorWebApiDependencyResolver(container);
-
-            GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
 }

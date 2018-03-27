@@ -1,9 +1,13 @@
-﻿using Phonebook.Domain.Entities;
+﻿using Dapper;
+using Phonebook.Domain.Command.Results;
+using Phonebook.Domain.Entities;
 using Phonebook.Domain.Repositories;
 using Phonebook.InfraStructure.DataContexts;
+using Phonebook.Shared;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace Phonebook.InfraStructure.Repositories
@@ -17,9 +21,15 @@ namespace Phonebook.InfraStructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<ContactOwner> Get()
+        public IEnumerable<CreateContactOwnerResult> Get()
         {
-            return _context.ContactOwners.AsNoTracking();
+            const string sql = "SELECT * FROM dbo.ContactOwner";
+
+            using (var conn = new SqlConnection(Runtime.ConnectionString))
+            {
+                return conn.Query<CreateContactOwnerResult>(sql);
+            }
+
         }
 
         public ContactOwner GetById(Guid id)
